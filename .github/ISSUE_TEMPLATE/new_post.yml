@@ -15,8 +15,6 @@ body:
           `文章标题 - 网站名称`  
           示例：`如何写出优秀的年终总结 - 我的博客`
         - **文章链接**：请填写文章的原始链接。
-        - **存档链接**：如有存档链接（例如：[IA](https://web.archive.org/save) 或 [AT](https://archive.today)），请填写存档链接。如果没有存档，可以留空。
-        - 我们将通过查找网站上的 RSS 订阅链接（如有）在 [box.saveweb.org](https://box.saveweb.org) 进行订阅，并分配博客 ID，便于后续项目管理（如 `review-2025`）。
   - type: input
     id: post_url
     attributes:
@@ -25,11 +23,3 @@ body:
       placeholder: "https://example.com/"
     validations:
       required: true
-  - type: input
-    id: archive_url
-    attributes:
-      label: "存档链接"
-      description: "如有存档链接（如 [IA](https://web.archive.org/save) 或 [AT](https://archive.today)），请填写存档链接。如果没有存档，可以留空。"
-      placeholder: "https://web.archive.org/xxxx"
-    validations:
-      required: false
