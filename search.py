@@ -32,11 +32,15 @@ Examples:
   # Search by article title and domain
   %(prog)s "文章标题" example.com
 
-  # Search by domain only
-  %(prog)s --domain-only example.com
+  # Search by domain only (two ways)
+  %(prog)s -d example.com
+  %(prog)s -d "" example.com
 
-  # Get blog_id from any article in the blog
-  %(prog)s "any keyword" example.com --get-blog-id
+  # Show more results
+  %(prog)s "关键词" example.com -n 20
+
+  # Output raw JSON
+  %(prog)s "关键词" example.com -j
         """
     )
 
@@ -55,7 +59,7 @@ Examples:
     parser.add_argument(
         "-d", "--domain-only",
         action="store_true",
-        help="Search by domain only"
+        help="Search by domain only (domain from second arg or title)"
     )
 
     parser.add_argument(
@@ -75,9 +79,11 @@ Examples:
 
     # Build search query
     if args.domain_only:
-        if not args.domain:
+        # Get domain from either args.domain or args.title
+        domain = args.domain or args.title
+        if not domain:
             parser.error("--domain-only requires a domain argument")
-        query = args.domain
+        query = domain
     else:
         if not args.title or not args.domain:
             parser.error("Both title and domain are required unless using --domain-only")
