@@ -21,7 +21,7 @@ WTF happened in 2025?
 """
 
 metadata_file = "metadata.csv"
-lines = []
+lines = set()
 
 def escape(text: str) -> str:
     return text.replace('|', '\\|')
@@ -39,7 +39,7 @@ with open(metadata_file, 'r') as csvfd:
         assert "|" not in archive_url, f"Archive URL should not contain '|', but got: {archive_url}"
         assert ")" not in archive_url, f"Archive URL should not contain ')', but got: {archive_url}"
         line = f'| [{escape(article_name)} - {escape(blog)}]({article_url}) | {blog_id or "Null"} | {"[IA]" if "archive.org" in archive_url else "[Other]" if archive_url else "Null"}{f"({archive_url})" if archive_url else ""} |'
-        lines.append(line)
+        lines.add(line)
 
 with open('README.md', 'w') as f:
     f.write(markdown+'计数: '+str(len(lines))+' 篇。下表每次 CI 乱序输出。\n\n')
