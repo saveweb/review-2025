@@ -15,9 +15,10 @@ WTF happened in 2025?
 
 ---
 
-计数: 2 篇。下表每次 CI 乱序输出。
+计数: 3 篇。下表每次 CI 乱序输出。
 
 | Article | BlogID | Archive
 | --- | --- | ---
 | [追寻自我的 2025 - 怠惰のコエ - imba久期](https://imba97.com/archives/810/) | 1585 | [IA](http://web.archive.org/web/20260222025929/https://imba97.com/archives/810/) |
 | [站在2025的尾巴上：回顾、感恩与前行 - 云栖梦泽](https://www.iliuqi.com/archives/life-review-2025) | Null | [IA](http://web.archive.org/web/20260222031310/https://www.iliuqi.com/archives/life-review-2025) |
+| [2025 - EzraKnotLab](https://ezraknotlab.github.io/post/2025/) | Null | [IA](http://web.archive.org/web/20260222041510/https://ezraknotlab.github.io/post/2025/) |
