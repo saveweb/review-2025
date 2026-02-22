@@ -15,7 +15,8 @@ WTF happened in 2025?
 
 ---
 
-计数: 0 篇。下表每次 CI 乱序输出。
+计数: 1 篇。下表每次 CI 乱序输出。
 
 | Article | BlogID | Archive
 | --- | --- | ---
+| [追寻自我的 2025 - 怠惰のコエ - imba久期](https://imba97.com/archives/810/) | 1585 | [IA](http://web.archive.org/web/20260222025929/https://imba97.com/archives/810/) |
